@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6D75F0FB75F86018E3E13353 /* Pods_Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8DBB5BE27929DC75A829C30 /* Pods_Social.framework */; };
+		A90319F31DD618E500FEB8CF /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90319F21DD618E500FEB8CF /* FeedVC.swift */; };
 		A92400C01DCD0CEB0034752C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92400BF1DCD0CEB0034752C /* AppDelegate.swift */; };
 		A92400C21DCD0CEB0034752C /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92400C11DCD0CEB0034752C /* SignInVC.swift */; };
 		A92400C51DCD0CEB0034752C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A92400C31DCD0CEB0034752C /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		9AC3DBEFE0DEB543F1A40411 /* Pods-Social.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Social/Pods-Social.debug.xcconfig"; sourceTree = "<group>"; };
+		A90319F21DD618E500FEB8CF /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		A92400BC1DCD0CEB0034752C /* Social.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Social.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A92400BF1DCD0CEB0034752C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A92400C11DCD0CEB0034752C /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				A92400C11DCD0CEB0034752C /* SignInVC.swift */,
+				A90319F21DD618E500FEB8CF /* FeedVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 					A92400BB1DCD0CEA0034752C = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 2N4D8AB7GA;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -273,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A90319F31DD618E500FEB8CF /* FeedVC.swift in Sources */,
 				A92400C21DCD0CEB0034752C /* SignInVC.swift in Sources */,
 				A94E47AE1DD3B63300BF6CE2 /* RoundBtn.swift in Sources */,
 				A94E47B01DD3B6B500BF6CE2 /* ShadowProt.swift in Sources */,
