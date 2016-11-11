@@ -10,6 +10,7 @@
 		6D75F0FB75F86018E3E13353 /* Pods_Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8DBB5BE27929DC75A829C30 /* Pods_Social.framework */; };
 		A90319F31DD618E500FEB8CF /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90319F21DD618E500FEB8CF /* FeedVC.swift */; };
 		A90319F51DD638AA00FEB8CF /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90319F41DD638AA00FEB8CF /* CircleImageView.swift */; };
+		A90319F71DD6425C00FEB8CF /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90319F61DD6425C00FEB8CF /* PostCell.swift */; };
 		A92400C01DCD0CEB0034752C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92400BF1DCD0CEB0034752C /* AppDelegate.swift */; };
 		A92400C21DCD0CEB0034752C /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92400C11DCD0CEB0034752C /* SignInVC.swift */; };
 		A92400C51DCD0CEB0034752C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A92400C31DCD0CEB0034752C /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 		9AC3DBEFE0DEB543F1A40411 /* Pods-Social.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Social/Pods-Social.debug.xcconfig"; sourceTree = "<group>"; };
 		A90319F21DD618E500FEB8CF /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		A90319F41DD638AA00FEB8CF /* CircleImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
+		A90319F61DD6425C00FEB8CF /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		A92400BC1DCD0CEB0034752C /* Social.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Social.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A92400BF1DCD0CEB0034752C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A92400C11DCD0CEB0034752C /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				A94E47B11DD3B9A700BF6CE2 /* FancyField.swift */,
 				A94E47B31DD3BB2E00BF6CE2 /* FancyBtn.swift */,
 				A90319F41DD638AA00FEB8CF /* CircleImageView.swift */,
+				A90319F61DD6425C00FEB8CF /* PostCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 				A94E47A91DD3B36200BF6CE2 /* FancyView.swift in Sources */,
 				A94E47B21DD3B9A700BF6CE2 /* FancyField.swift in Sources */,
 				A94E47B41DD3BB2E00BF6CE2 /* FancyBtn.swift in Sources */,
+				A90319F71DD6425C00FEB8CF /* PostCell.swift in Sources */,
 				A90319F51DD638AA00FEB8CF /* CircleImageView.swift in Sources */,
 				A94E47AC1DD3B3EB00BF6CE2 /* Constants.swift in Sources */,
 			);
