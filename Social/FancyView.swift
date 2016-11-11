@@ -12,9 +12,8 @@ class FancyView: UIView, lightShadow {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         setShadow(toItem: layer)
-        
+        layer.cornerRadius = 5.0
     }
 
 }
