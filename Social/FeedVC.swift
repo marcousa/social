@@ -19,7 +19,12 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        // Do any additional setup after loading the view.
+        
+        //initialize an observer to the posts in Firebase
+        DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
+            print(snapshot.value)
+        })
+        
     }
 
     @IBAction func signOutTapped(_ sender: AnyObject) {
