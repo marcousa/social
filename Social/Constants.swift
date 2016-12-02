@@ -12,3 +12,4 @@ import Firebase
 let SHADOW_GRAY: CGFloat = 120/255
 let KEY_UID = "uid"
 let DB_BASE = FIRDatabase.database().reference()
+let STORAGE_BASE = FIRStorage.storage().reference()
