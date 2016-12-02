@@ -34,6 +34,9 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         //initialize an observer to the posts in Firebase
         DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
             
+            //Clear out the posts array when the data is pulled again, to avoid duplication of posts in the feed
+            self.posts = []
+            
             if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
                 
                 for snap in snapshot {
@@ -46,7 +49,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
                 }
                 
             }
-          self.tableView.reloadData()
+            self.tableView.reloadData()
         })
     }
 
@@ -144,13 +147,10 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
             
             if let image = FeedVC.imageCache.object(forKey: post.imageUrl as NSString) {
                 cell.configureCell(post: post, img: image)
-                return cell
             } else {
                 cell.configureCell(post: post)
-                return cell
             }
-            
-            
+            return cell
         } else {
             return PostCell()
         }
