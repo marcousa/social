@@ -14,10 +14,13 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var imageAdd: CircleImageView!
+    @IBOutlet weak var captionField: FancyField!
     
     var posts = [Post]()
     var imagePicker: UIImagePickerController!
     static var imageCache: NSCache<NSString, UIImage> = NSCache()
+    var imageSelected = false
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,6 +61,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
             imageAdd.image = image
+            imageSelected = true
         } else {
             print("Invalid image selected")
         }
@@ -68,6 +72,40 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     
     @IBAction func addImageTapped(_ sender: Any) {
         present(imagePicker, animated: true, completion: nil)
+    }
+    
+    @IBAction func postButtonTapped(_ sender: Any) {
+        
+        guard let caption = captionField.text, caption != "" else {
+            print("Error: Caption must be entered")
+            return
+        }
+        
+        guard let image = imageAdd.image, imageSelected == true else {
+            print("Error: The post must contain an image")
+            return
+        }
+        
+        if let imageData = UIImageJPEGRepresentation(image, 0.2) {
+            
+            //set a unique id for the image, and metadata for its type
+            let imageUid = NSUUID().uuidString
+            let metadata = FIRStorageMetadata()
+            metadata.contentType = "image/jpeg"
+            
+            //upload the image to Firebase
+            DataService.ds.REF_POST_IMAGES.child(imageUid).put(imageData, metadata: metadata) { (metadata, error) in
+                if error != nil {
+                    print("Error: Could not upload image into Firebase storage")
+                } else {
+                    print("Successfully uploaded image to Firebase storage")
+                    let downloadUrl = metadata?.downloadURL()?.absoluteString
+                    //reset the image and post caption
+                }
+            }
+            
+        }
+        
     }
     
     
